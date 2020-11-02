@@ -1,3 +1,5 @@
+#Script to search google for CPU ID when hunting for Ryzen 7 5800X
+
 from sys import argv
 def CPUSearch(CPUquery):
     print("Searching......")
