@@ -1,7 +1,5 @@
 #Script to search google for CPU ID when hunting for Ryzen 7 5800X
-
 from sys import argv
-searchstring = ""
 def CPUSearch(CPUquery,searchstring):
     print("Searching......")
     found = False
@@ -9,7 +7,6 @@ def CPUSearch(CPUquery,searchstring):
         from googlesearch import search 
     except ImportError:  
         print("No module found, make sure it is imported") 
-#Iterate
     for j in search(CPUquery, tld="com", num=10, stop=10, pause=2): 
         if searchstring in j:
             print(j)
