@@ -1,6 +1,7 @@
 #Script to search google for CPU ID when hunting for Ryzen 7 5800X
-import config
 from sys import argv
+import sys
+import config
 from pushbullet import Pushbullet   
 pb = Pushbullet(config.pbtoken)
 def CPUSearch(CPUquery,searchstring=".ca"):
