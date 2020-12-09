@@ -9,7 +9,8 @@ $currentvalue = Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightn
 }
 else
 {
-$setvalue = "35"
+    
+$setvalue = "65"
 $currentvalue = Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightness | Select-Object -ExpandProperty CurrentBrightness
 (Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,$setvalue)
 if ($setvalue -eq $currentvalue){
